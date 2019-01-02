@@ -49,6 +49,8 @@ void GameDraw::DrawGlobalBox(float x, float y, float w, float h)
 
 void GameDraw::DrawBox(float x, float y, float sw, float sh,float rot, float scale, bool global, int rX, int rY)
 {
+
+
     static const GLfloat squareVertices[] = {
         .5f, -.5f, 0,            // Top left
         -.5f, -.5f, 0,            // Bottom left
@@ -70,11 +72,6 @@ void GameDraw::DrawBox(float x, float y, float sw, float sh,float rot, float sca
         W = sw;
         X = x;
         Y = y;
-
-        /*W = sw;
-        H = sh;
-        X = x;
-        Y = y;*/
     }
 
     if (rX == -1 && rY == -1)
@@ -91,6 +88,9 @@ void GameDraw::DrawBox(float x, float y, float sw, float sh,float rot, float sca
 
     shiftZ = 0;
     shiftZ2 = 0;
+
+  if (false) // openGL
+  {
     //if (!global && (X + W < 0 || X > GameEngine::SCREEN_W || Y + H < 0 || Y > GameEngine::SCREEN_W)) {return;}
     glPushMatrix();
     //glLoadIdentity();
@@ -112,6 +112,18 @@ void GameDraw::DrawBox(float x, float y, float sw, float sh,float rot, float sca
     glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
 
     glPopMatrix();
+  }
+  else
+  {
+   SDL_Rect r = {X,Y,W,H};
+   SDL_FillRect(GameEngine::screen,&r, SDL_MapRGB(GameEngine::screen->format, (int)(GameEngine::color.r*256),(int)(GameEngine::color.g*256),(int)(GameEngine::color.b*256)) );
+
+
+  }
+
+
+
+
 
 }
 
@@ -173,7 +185,8 @@ void GameDraw::DrawImagePart(GImage* image, float x, float y, int sx, int sy, in
         rX = (int)(rX*GameEngine::GlobalScale - W/2);
         rY = (int)((rY)*GameEngine::GlobalScale - H/2);
     }
-
+if (false)
+{
   // X = (int)(X+.5f);
   // Y = (int)(Y+.5f);
     //W = (int)(W);
@@ -242,6 +255,18 @@ void GameDraw::DrawImagePart(GImage* image, float x, float y, int sx, int sy, in
 
     glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
 glPopMatrix();
+
+}
+else
+{
+
+SDL_Rect r = {X,Y,W,H};
+SDL_Rect srcR = {sx,sy,sw,sh};
+   SDL_BlitSurface( image->surface, &srcR, GameEngine::screen, &r );
+
+
+
+}
 }
 
 

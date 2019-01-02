@@ -955,3 +955,308 @@
 1518198597 /opt/vc/include/interface/vmcs_host/linux/vchost_config.h
 	"interface/vcos/vcos.h"
 
+1546364476 source:/home/pi/code/duckpond_nogl/GameEngine/GMusic.cpp
+	"GMusic.h"
+	"GSound.h"
+
+1546364476 /home/pi/code/duckpond_nogl/GameEngine/GMusic.h
+	<SDL/SDL_mixer.h>
+	"GameEngine.h"
+
+1546365230 /home/pi/code/duckpond_nogl/GameEngine/GameEngine.h
+	<SDL/SDL.h>
+	<SDL/SDL_opengl.h>
+	<SDL/SDL_image.h>
+	<SDL/SDL_mixer.h>
+	<math.h>
+	<iostream>
+	"GTypes.h"
+	"GFont.h"
+	"KString.h"
+	<fstream>
+	"GList.h"
+	"GameDraw.h"
+	"TextPrint.h"
+	"GMap.h"
+	"GScript.h"
+	"GSound.h"
+	"GMusic.h"
+	"GPair.h"
+	"Sprite.h"
+
+1546364476 /home/pi/code/duckpond_nogl/GameEngine/GTypes.h
+
+1546364476 /home/pi/code/duckpond_nogl/GameEngine/GFont.h
+	<iostream>
+	"KString.h"
+
+1546364476 /home/pi/code/duckpond_nogl/GameEngine/KString.h
+	<string>
+	<cstring>
+	<iostream>
+	<cstdio>
+	<cstdarg>
+	<cstdlib>
+	"GList.h"
+
+1546364476 /home/pi/code/duckpond_nogl/GameEngine/GList.h
+	<vector>
+
+1546364476 /home/pi/code/duckpond_nogl/GameEngine/GameDraw.h
+	<iostream>
+	"GImage.h"
+	"GText.h"
+	<string>
+
+1546366571 /home/pi/code/duckpond_nogl/GameEngine/GImage.h
+	"GameEngine.h"
+	"GMap.h"
+
+1546364476 /home/pi/code/duckpond_nogl/GameEngine/GMap.h
+	"GList.h"
+
+1546364476 /home/pi/code/duckpond_nogl/GameEngine/GText.h
+	"GFont.h"
+	"GList.h"
+
+1546364476 /home/pi/code/duckpond_nogl/GameEngine/TextPrint.h
+	"GameEngine.h"
+	"GameDraw.h"
+	"GText.h"
+
+1546364476 /home/pi/code/duckpond_nogl/GameEngine/GScript.h
+	"GameEngine.h"
+
+1546364476 /home/pi/code/duckpond_nogl/GameEngine/GSound.h
+	"GameEngine.h"
+	<SDL/SDL_mixer.h>
+
+1546364476 /home/pi/code/duckpond_nogl/GameEngine/GPair.h
+	<vector>
+
+1546364476 /home/pi/code/duckpond_nogl/GameEngine/Sprite.h
+	"GameEngine.h"
+	"GImage.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/GameEngine/GScript.cpp
+	"GScript.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/GameEngine/GSound.cpp
+	"GSound.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/GameEngine/GText.cpp
+	"GText.h"
+	"GameEngine.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/GameEngine/Sprite.cpp
+	"Sprite.h"
+	"GameDraw.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/GameEngine/TextPrint.cpp
+	"TextPrint.h"
+	"../MainSub.h"
+	"GSound.h"
+
+1546364476 /home/pi/code/duckpond_nogl/MainSub.h
+	"GameEngine/GameEngine.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/Hawk.cpp
+	"Hawk.h"
+	"DuckData.h"
+	"Pond.h"
+	"Duck.h"
+	"Duckling.h"
+
+1546364476 /home/pi/code/duckpond_nogl/Hawk.h
+	"Animal.h"
+
+1546364476 /home/pi/code/duckpond_nogl/Animal.h
+	"Entity.h"
+
+1546364476 /home/pi/code/duckpond_nogl/Entity.h
+	"MainFile.h"
+
+1546364476 /home/pi/code/duckpond_nogl/MainFile.h
+	"GameEngine/GameEngine.h"
+	"GameEngine/Sprite.h"
+	"MainSub.h"
+
+1546364476 /home/pi/code/duckpond_nogl/DuckData.h
+	"Player.h"
+	"MainFile.h"
+
+1546364476 /home/pi/code/duckpond_nogl/Player.h
+	"MainFile.h"
+
+1546364476 /home/pi/code/duckpond_nogl/Pond.h
+	"MainFile.h"
+
+1546364476 /home/pi/code/duckpond_nogl/Duck.h
+	"Animal.h"
+	"Player.h"
+
+1546364476 /home/pi/code/duckpond_nogl/Duckling.h
+	"Animal.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/MainFile.cpp
+	"MainFile.h"
+	"GameEngine/GImage.h"
+	"GameEngine/Sprite.h"
+	"GameEngine/GSound.h"
+	"GameEngine/GMusic.h"
+	"GameEngine/GameDraw.h"
+	"MainSub.h"
+	"MainGame.h"
+	"GameEngine/GFont.h"
+	"MainMenu.h"
+
+1546364476 /home/pi/code/duckpond_nogl/MainGame.h
+	"MainSub.h"
+	"DuckData.h"
+
+1546364476 /home/pi/code/duckpond_nogl/MainMenu.h
+	"MainSub.h"
+	"Player.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/MainGame.cpp
+	"MainGame.h"
+	"Pond.h"
+	"Duck.h"
+	"Fly.h"
+	"Plant.h"
+	"Fish.h"
+	"Fox.h"
+	"Hawk.h"
+
+1546364476 /home/pi/code/duckpond_nogl/Fly.h
+	"Animal.h"
+
+1546364476 /home/pi/code/duckpond_nogl/Plant.h
+	"Entity.h"
+
+1546364476 /home/pi/code/duckpond_nogl/Fish.h
+	"Animal.h"
+
+1546364476 /home/pi/code/duckpond_nogl/Fox.h
+	"Animal.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/MainMenu.cpp
+	"MainMenu.h"
+	"DuckData.h"
+	"Pond.h"
+	"MainGame.h"
+	"Plant.h"
+	"Duck.h"
+	"Duckling.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/MainSub.cpp
+	"MainSub.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/Plant.cpp
+	"Plant.h"
+	"DuckData.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/Player.cpp
+	"Player.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/Pond.cpp
+	"Pond.h"
+	"Entity.h"
+	"Duck.h"
+	"PopText.h"
+
+1546364476 /home/pi/code/duckpond_nogl/PopText.h
+	"MainFile.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/PopText.cpp
+	"PopText.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/Animal.cpp
+	"Animal.h"
+	"Pond.h"
+	"Plant.h"
+	"DuckData.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/Duck.cpp
+	"Duck.h"
+	"DuckData.h"
+	"Duckling.h"
+	"Egg.h"
+	"Pond.h"
+	"Fly.h"
+	"Fish.h"
+	"PopText.h"
+	"MainGame.h"
+
+1546364476 /home/pi/code/duckpond_nogl/Egg.h
+	"Entity.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/DuckData.cpp
+	"DuckData.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/Duckling.cpp
+	"Duckling.h"
+	"DuckData.h"
+	"Duck.h"
+	"Pond.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/Egg.cpp
+	"Egg.h"
+	"DuckData.h"
+	"Pond.h"
+	"Duckling.h"
+	"Animal.h"
+	"Duck.h"
+	"PopText.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/Entity.cpp
+	"Entity.h"
+	"Pond.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/Fish.cpp
+	"Fish.h"
+	"Pond.h"
+	"DuckData.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/Fly.cpp
+	"Fly.h"
+	"DuckData.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/Fox.cpp
+	"Fox.h"
+	"DuckData.h"
+	"Pond.h"
+	"Duck.h"
+	"Duckling.h"
+	"Egg.h"
+
+1546372291 source:/home/pi/code/duckpond_nogl/GameEngine/GameDraw.cpp
+	"GameDraw.h"
+	"GameEngine.h"
+	"GFont.h"
+	<string>
+	"../MainFile.h"
+	"GameEngine.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/GameEngine/GameEngine_Files.cpp
+	"GameEngine.h"
+
+1546364476 source:/home/pi/code/duckpond_nogl/GameEngine/GameEngine_Main.cpp
+	"GameEngine.h"
+	"../MainFile.h"
+	<cstdlib>
+
+1546364476 source:/home/pi/code/duckpond_nogl/GameEngine/GFont.cpp
+	"GFont.h"
+	"GImage.h"
+	"GameEngine.h"
+
+1546372043 source:/home/pi/code/duckpond_nogl/GameEngine/GImage.cpp
+	"GImage.h"
+
+1546365366 source:/home/pi/code/duckpond_nogl/GameEngine/GameEngine.cpp
+	"GameEngine.h"
+	"../MainFile.h"
+	"GameDraw.h"
+	"bcm_host.h"
+

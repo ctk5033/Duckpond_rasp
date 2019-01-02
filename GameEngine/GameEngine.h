@@ -126,6 +126,10 @@ class GameEngine
   static void Finish();
 
 
+
+  static SDL_Surface* screen;
+
+
   static void ForceClose();
 
   static bool gameOn;

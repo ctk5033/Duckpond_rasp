@@ -50,6 +50,9 @@ Uint32 GameEngine::flags = 0;
 
 int GameEngine::joyCount = 8;
 
+
+SDL_Surface* GameEngine::screen = NULL;
+
 float GameEngine::GetFPS()
 {
  return frameLimit;
@@ -104,12 +107,12 @@ void GameEngine::Init(KString name, int w, int h, int windowW, int windowH, int 
 
   //| SDL_FULLSCREEN
 
-  flags = SDL_OPENGL ;
+  flags = SDL_SWSURFACE;//SDL_OPENGL ;
 
 
   // fullscreen -1 means it is chosen by the parameters, 0 = no full screen, 1 = fullscreen
 
-  bool fScreen = true;
+  bool fScreen = false;
   if (fullScreen == -1 && paramList.Contains(KString("-f")) || fullScreen == 1)
   {
    fScreen = true;
@@ -178,7 +181,7 @@ void GameEngine::SetVideo(bool fullScreen, bool reloadImages)
   WINDOW_H = systemY;
 
 
-  SDL_SetVideoMode(systemX, systemY, bpp, flags );
+  screen = SDL_SetVideoMode(systemX, systemY, bpp, flags );
 /*
 
       EGLDisplay eglDpy = eglGetDisplay(EGL_DEFAULT_DISPLAY);
@@ -363,7 +366,14 @@ void GameEngine::Draw()
 
  glPopMatrix();
 
- SDL_GL_SwapBuffers();
+ if (false)
+ {
+  SDL_GL_SwapBuffers();
+  }
+  else
+  {
+   SDL_Flip( screen );
+  }
 }
 
 

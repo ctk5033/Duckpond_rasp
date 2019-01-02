@@ -18,6 +18,8 @@ GImage* GImage::GetImg(KString img)
   return imRet;
  }
 
+
+
  return NULL;
 }
 
@@ -56,12 +58,15 @@ int getNextPowerOfTwo(int v)
 GImage::GImage(KString sfilename)
 {
   filename = KString(sfilename.str);
+   surface = NULL;
   Reload(false);
 }
 
 void GImage::Reload(bool deleteOld)
 {
  if (deleteOld){glDeleteTextures( 1, &data );}
+
+ SDL_FreeSurface(surface);
 
  SDL_Surface* text;
  SDL_Surface* surf;
@@ -151,8 +156,10 @@ void GImage::Reload(bool deleteOld)
 
 
 
- SDL_FreeSurface(surf);
- SDL_FreeSurface(text);
+ //SDL_FreeSurface(surf);
+ //SDL_FreeSurface(text);
+
+ surface = surf;
 
 
 
@@ -163,4 +170,5 @@ void GImage::Reload(bool deleteOld)
 GImage::~GImage()
 {
  glDeleteTextures( 1, &data );
+ SDL_FreeSurface(surface);
 }

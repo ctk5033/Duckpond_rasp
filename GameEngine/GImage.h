@@ -20,6 +20,8 @@ class GImage
   int oW; // size of the image after power of two increase
   int oH;
 
+  SDL_Surface* surface;
+
 
   KString filename;
 
