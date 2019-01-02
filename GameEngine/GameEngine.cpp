@@ -17,6 +17,9 @@ int GameEngine::WINDOW_H = 600;
 bool GameEngine::gameOn = true;
 
 
+SDL_Window* GameEngine::window = NULL;
+
+
 float GameEngine::GlobalScale = 1.0f;
 float GameEngine::ScreenShiftX = 0;
 float GameEngine::ScreenShiftY = 0;
@@ -169,19 +172,27 @@ void GameEngine::SetVideo(bool fullScreen, bool reloadImages)
 
    Uint32 flags = GameEngine::flags;
 
-   if (fullScreen){flags = flags | SDL_FULLSCREEN;}
+   if (fullScreen){flags = flags | SDL_WINDOW_FULLSCREEN;}
 
-     const SDL_VideoInfo* videoInfo = SDL_GetVideoInfo ();
+/*     const SDL_VideoInfo* videoInfo = SDL_GetVideoInfo ();
 
   int systemX = videoInfo->current_w ;
   int systemY = videoInfo->current_h ;
   Uint8 bpp = videoInfo->vfmt->BitsPerPixel ;
 
   WINDOW_W = systemX;
-  WINDOW_H = systemY;
+  WINDOW_H = systemY;*/
+
+  Uint8 bpp = 32;
 
 
-  screen = SDL_SetVideoMode(systemX, systemY, bpp, flags );
+  window = SDL_CreateWindow( "SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WINDOW_W, WINDOW_H, SDL_WINDOW_SHOWN );
+
+
+  screen = SDL_GetWindowSurface( window);
+
+
+//  screen = SDL_SetVideoMode(WINDOW_W, WINDOW_H, bpp, flags );
 /*
 
       EGLDisplay eglDpy = eglGetDisplay(EGL_DEFAULT_DISPLAY);
@@ -227,7 +238,7 @@ void GameEngine::SetVideo(bool fullScreen, bool reloadImages)
  	glLoadIdentity();
 
 
- 	gluPerspective(45.0f,(GLfloat)SCREEN_W/(GLfloat)SCREEN_H,0.1f,100.0f);
+ 	//gluPerspective(45.0f,(GLfloat)SCREEN_W/(GLfloat)SCREEN_H,0.1f,100.0f);
 
  	glMatrixMode(GL_MODELVIEW);
  	glLoadIdentity();
@@ -368,11 +379,12 @@ void GameEngine::Draw()
 
  if (false)
  {
-  SDL_GL_SwapBuffers();
+ // SDL_GL_SwapBuffers();
   }
   else
   {
-   SDL_Flip( screen );
+  //   SDL_Flip( screen );
+  SDL_UpdateWindowSurface( window );
   }
 }
 

@@ -81,7 +81,7 @@ void GImage::Reload(bool deleteOld)
 
 
  surf = IMG_Load(filename.str.c_str());
- if (!surf)
+ /*if (!surf)
  {
   char errbox[256];
   sprintf(errbox, "Error Loading File: %s", filename.str.c_str());
@@ -154,7 +154,7 @@ void GImage::Reload(bool deleteOld)
  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 
-
+*/
 
  //SDL_FreeSurface(surf);
  //SDL_FreeSurface(text);

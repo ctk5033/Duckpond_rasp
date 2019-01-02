@@ -31,18 +31,19 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="`sdl2-config --cflags --libs`" />
 			<Add directory="C:/SDL/SDL-1.2.15/include" />
 			<Add directory="/opt/vc/include" />
 		</Compiler>
 		<Linker>
 			<Add option="-I/opt/vc/include -lbcm_host" />
-			<Add library="SDLmain" />
+			<Add library="SDL2main" />
 			<Add library="GL" />
 			<Add library="GLU" />
 			<Add library="glut" />
-			<Add library="SDL" />
-			<Add library="SDL_mixer" />
-			<Add library="SDL_image" />
+			<Add library="SDL2" />
+			<Add library="SDL2_mixer" />
+			<Add library="SDL2_image" />
 			<Add directory="C:/SDL/SDL-1.2.15/lib" />
 			<Add directory="/opt/vc/lib" />
 		</Linker>

@@ -260,9 +260,9 @@ glPopMatrix();
 else
 {
 
-SDL_Rect r = {X,Y,W,H};
-SDL_Rect srcR = {sx,sy,sw,sh};
-   SDL_BlitSurface( image->surface, &srcR, GameEngine::screen, &r );
+    SDL_Rect r = {X,Y,W,H};
+    SDL_Rect srcR = {sx,sy,sw,sh};
+   SDL_BlitScaled( image->surface, &srcR, GameEngine::screen, &r );
 
 
 

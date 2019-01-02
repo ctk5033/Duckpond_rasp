@@ -2,7 +2,7 @@
 #ifndef GMUSIC_H
 #define GMUSIC_H 1
 
-#include <SDL/SDL_mixer.h>
+#include <SDL2/SDL_mixer.h>
 
 #include "GameEngine.h"
 

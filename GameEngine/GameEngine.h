@@ -3,14 +3,17 @@
 
 
 
-#include <SDL/SDL.h>
-#include <SDL/SDL_opengl.h>
-#include <SDL/SDL_image.h>
-#include <SDL/SDL_mixer.h>
+
+
 
 
 #include <math.h>
 #include <iostream>
+
+#include <SDL2/SDL_opengl.h>
+#include <SDL2/SDL_image.h>
+#include <SDL2/SDL_mixer.h>
+#include <SDL2/SDL.h>
 
 #include "GTypes.h"
 #include "GFont.h"
@@ -88,6 +91,9 @@ class GameEngine
   static const int MOUSE_LEFT = 0;
   static const int MOUSE_WHEEL = 1;
   static const int  MOUSE_RIGHT = 2;
+
+
+  static SDL_Window* window;
 
 
 

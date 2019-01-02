@@ -122,7 +122,7 @@ int main( int argc, char** args)
    GameEngine::Draw();
 
 
-   SDL_GL_SwapBuffers();
+//   SDL_GL_SwapBuffers();
 
 
   }
