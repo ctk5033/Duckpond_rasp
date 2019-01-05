@@ -7,7 +7,7 @@
 
 
 
- #include  "bcm_host.h"
+ 
 
 int GameEngine::SCREEN_W = 800;
 int GameEngine::SCREEN_H = 600;
@@ -63,7 +63,7 @@ float GameEngine::GetFPS()
 
 void GameEngine::Init(KString name, int w, int h, int windowW, int windowH, int fullScreen)
 {
-   bcm_host_init();
+   //bcm_host_init();
 
 
    // ---

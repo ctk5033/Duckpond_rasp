@@ -32,19 +32,17 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="`sdl2-config --cflags --libs`" />
-			<Add directory="C:/SDL/SDL-1.2.15/include" />
+			<Add option="-DRPI_NO_X `sdl2-config --cflags --libs`" />
 			<Add directory="/opt/vc/include" />
 		</Compiler>
 		<Linker>
-			<Add option="-I/opt/vc/include -lbcm_host" />
-			<Add library="SDL2main" />
+			<Add option="-I/opt/vc/include -lbcm_host `sdl2-config --cflags --libs`" />
 			<Add library="GL" />
 			<Add library="GLU" />
 			<Add library="glut" />
-			<Add library="SDL2" />
 			<Add library="SDL2_mixer" />
 			<Add library="SDL2_image" />
-			<Add directory="C:/SDL/SDL-1.2.15/lib" />
+			<Add library="SDL2main" />
 			<Add directory="/opt/vc/lib" />
 		</Linker>
 		<Unit filename="Animal.cpp" />
