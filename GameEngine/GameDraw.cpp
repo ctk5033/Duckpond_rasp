@@ -262,6 +262,7 @@ else
 
     SDL_Rect r = {X,Y,W,H};
     SDL_Rect srcR = {sx,sy,sw,sh};
+    SDL_SetTextureColorMod(image->surface,200,0,0);
    SDL_BlitScaled( image->surface, &srcR, GameEngine::screen, &r );
 
 
