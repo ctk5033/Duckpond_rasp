@@ -7,7 +7,7 @@
 
 
 
- 
+
 
 int GameEngine::SCREEN_W = 800;
 int GameEngine::SCREEN_H = 600;
@@ -33,7 +33,7 @@ GFont* GameEngine::curFont = NULL;
 GColor GameEngine::color;
 GColor GameEngine::colorMask;
 
-int GameEngine::key[256];
+int GameEngine::key[2048];
 
 int GameEngine::mouseX = 0;
 int GameEngine::mouseY = 0;

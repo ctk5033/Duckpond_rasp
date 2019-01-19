@@ -1,2 +1,2 @@
-g++ -o main2 `cat buildfiles` `sdl2-config --cflags --libs` -lSDL_image -lSDL_mixer -lGL
+g++ -o main2 `cat buildfiles` `sdl2-config --cflags --libs` -lSDL2_image -lSDL2_mixer -lGL
 
