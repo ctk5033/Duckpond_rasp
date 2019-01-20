@@ -1,0 +1,3 @@
+rm main2
+g++ -o main2 -std=c++0x -pedantic -Wall `cat buildfiles` `sdl2-config --cflags --libs` -lSDL2_image -lSDL2_mixer -lGL -lGLU -lglut
+

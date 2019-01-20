@@ -1,0 +1,2 @@
+-I/usr/include/SDL2 -I/opt/vc/include -I/opt/vc/include/interface/vmcs_host/linux -D_REENTRANT
+-L/usr/lib -lSDL2 

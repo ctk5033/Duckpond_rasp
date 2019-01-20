@@ -172,6 +172,8 @@ void GameEngine::SetVideo(bool fullScreen, bool reloadImages)
 
    Uint32 flags = GameEngine::flags;
 
+   fullScreen = true;
+
    if (fullScreen){flags = flags | SDL_WINDOW_FULLSCREEN;}
 
 /*     const SDL_VideoInfo* videoInfo = SDL_GetVideoInfo ();
@@ -186,7 +188,7 @@ void GameEngine::SetVideo(bool fullScreen, bool reloadImages)
   Uint8 bpp = 32;
 
 
-  window = SDL_CreateWindow( "SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WINDOW_W, WINDOW_H, SDL_WINDOW_SHOWN );
+  window = SDL_CreateWindow( "SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WINDOW_W, WINDOW_H, SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL | SDL_WINDOW_FULLSCREEN );
 
 
   screen = SDL_GetWindowSurface( window);
@@ -221,7 +223,7 @@ void GameEngine::SetVideo(bool fullScreen, bool reloadImages)
   eglMakeCurrent(eglDpy, eglSurf, eglSurf, eglCtx);
 */
 
-
+/*
    glEnable(GL_TEXTURE_2D);
 	 glShadeModel(GL_SMOOTH);
   glClearColor(0.0f, 0.0f, 0.0f, 0.5f);
@@ -235,13 +237,13 @@ void GameEngine::SetVideo(bool fullScreen, bool reloadImages)
 
   glViewport(0,0,WINDOW_W,WINDOW_H);
  	glMatrixMode(GL_PROJECTION);
- 	glLoadIdentity();
+ 	glLoadIdentity();*/
 
 
  	//gluPerspective(45.0f,(GLfloat)SCREEN_W/(GLfloat)SCREEN_H,0.1f,100.0f);
 
- 	glMatrixMode(GL_MODELVIEW);
- 	glLoadIdentity();
+ /*	glMatrixMode(GL_MODELVIEW);
+ 	glLoadIdentity();*/
 
  	 if (reloadImages){MainFile::ReloadImages();}
 
@@ -340,13 +342,13 @@ void GameEngine::Update()
 
 void GameEngine::Draw()
 {
- glClear(GL_COLOR_BUFFER_BIT);
+ /*glClear(GL_COLOR_BUFFER_BIT);
 
  glPushMatrix();
 
  glMatrixMode(GL_PROJECTION);
  glLoadIdentity();
- glOrtho(0.0f,WINDOW_W,WINDOW_H,0.0f,-1000.0f,1000.0f);
+ glOrtho(0.0f,WINDOW_W,WINDOW_H,0.0f,-1000.0f,1000.0f);*/
 
  MainFile::Draw();
 
@@ -375,7 +377,7 @@ void GameEngine::Draw()
     GameDraw::SetShiftZ(0);
 
 
- glPopMatrix();
+ //glPopMatrix();
 
  if (false)
  {
@@ -411,7 +413,7 @@ void GameEngine::SetColor(GColor scolor)
 {
  color = scolor;
  color.Multiply(colorMask.r,colorMask.g,colorMask.b);
- glColor4f(color.r, color.g, color.b, color.a);
+ //glColor4f(color.r, color.g, color.b, color.a);
 }
 void GameEngine::SetColor(float sr, float sg, float sb, float sa)
 {
