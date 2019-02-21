@@ -43,7 +43,7 @@ void MainFile::Init()
 
 
  // game screen size, window size
- GameEngine::Init("Duck Pond", 1280/4,720/4,1024,768);
+ GameEngine::Init("Duck Pond", 1280/4,720/4,1366,768);//1280/2,800/2);
 
  // init data here
  DuckData::InitData();

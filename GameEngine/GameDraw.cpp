@@ -260,12 +260,12 @@ glPopMatrix();
 else
 {
 
-   /* SDL_Rect r = {X,Y,W,H};
+    SDL_Rect r = {X,Y,W,H};
     SDL_Rect srcR = {sx,sy,sw,sh};
-   // SDL_SetTextureColorMod(image->surface,200,0,0);
+   // SDL_SetTextureColorMod(image,200,0,0);
    SDL_BlitScaled( image->surface, &srcR, GameEngine::screen, &r );
-*/
-   GameDraw::DrawBox(x,y,1,1);
+
+ //  GameDraw::DrawBox(x,y,1,1);
 
 
 
@@ -285,7 +285,7 @@ else
 
 int GameDraw::DrawText(KString stext, float x, float y, bool center, int underLine)
 {
-return 1;
+
     int curPosition = 0;
 
     int cx; int cy; int cw; int ch;
@@ -317,6 +317,9 @@ return 1;
     int textLength = text.length();
     for (int i = 0; i < textLength; i++)
     {
+    GameEngine::curFont->tileW = 32;
+    GameEngine::curFont->tileH = 32;
+    GameEngine::curFont->tileCountX = 16;
         cx = ((int)text.c_str()[i]-GFont::STARTING_CHAR)%GameEngine::curFont->tileCountX*GameEngine::curFont->tileW;
         cy = ((int)text.c_str()[i]-GFont::STARTING_CHAR)/GameEngine::curFont->tileCountX*GameEngine::curFont->tileH;
         cw = GameEngine::curFont->tileW;

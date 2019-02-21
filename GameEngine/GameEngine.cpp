@@ -115,7 +115,7 @@ void GameEngine::Init(KString name, int w, int h, int windowW, int windowH, int 
 
   // fullscreen -1 means it is chosen by the parameters, 0 = no full screen, 1 = fullscreen
 
-  bool fScreen = false;
+  bool fScreen = true;
   if (fullScreen == -1 && paramList.Contains(KString("-f")) || fullScreen == 1)
   {
    fScreen = true;
@@ -152,7 +152,7 @@ void GameEngine::Init(KString name, int w, int h, int windowW, int windowH, int 
   }
 
  // defaultFontIm = new GImage(KString("data/font/codFont.png"));
-  defaultFont = new GFont( "data/font/codfont.cff", 1.0f);
+  defaultFont = new GFont( "data/font/standard_font.txt", 1.0f);
   SetFont(defaultFont);
 
   InitJoystick();
@@ -170,9 +170,9 @@ void GameEngine::SetVideo(bool fullScreen, bool reloadImages)
 
 
 
-   Uint32 flags = GameEngine::flags;
+   Uint32 flags = 0;//GameEngine::flags;
 
-   fullScreen = true;
+   //fullScreen = false;
 
    if (fullScreen){flags = flags | SDL_WINDOW_FULLSCREEN;}
 
@@ -187,8 +187,13 @@ void GameEngine::SetVideo(bool fullScreen, bool reloadImages)
 
   Uint8 bpp = 32;
 
+  SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 2);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 0);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_ES);
 
-  window = SDL_CreateWindow( "SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WINDOW_W, WINDOW_H, SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL | SDL_WINDOW_FULLSCREEN );
+
+ // SDL_OPENGL
+  window = SDL_CreateWindow( "SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WINDOW_W, WINDOW_H, SDL_WINDOW_SHOWN | flags | SDL_WINDOW_OPENGL  );
 
 
   screen = SDL_GetWindowSurface( window);
@@ -412,7 +417,7 @@ void GameEngine::End()
 void GameEngine::SetColor(GColor scolor)
 {
  color = scolor;
- color.Multiply(colorMask.r,colorMask.g,colorMask.b);
+// color.Multiply(colorMask.r,colorMask.g,colorMask.b);
  //glColor4f(color.r, color.g, color.b, color.a);
 }
 void GameEngine::SetColor(float sr, float sg, float sb, float sa)

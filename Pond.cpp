@@ -18,6 +18,9 @@ int Pond::TILE_H = 16;
   colorGround.SetColor(150,76,23);
   colorPond.SetColor(139,173,213);
   colorPond2.SetColor(89,150,222);
+
+  testColor.SetColor(255,20,20);
+
   groundY = 6;
   waterH = 4;
   w = GameEngine::SCREEN_W/TILE_W;
@@ -83,6 +86,13 @@ int Pond::TILE_H = 16;
    }
 
    PopText::DrawList(&poptextList);
+
+
+  // GameEngine::SetColor(testColor);
+  //GameEngine::SetColor(255,10,10);
+ // GameEngine::SetColor(255,20,20);
+  // GameDraw::DrawBox(50,50,50,50);
+
 
   }
 

@@ -37,6 +37,8 @@ class Pond
   GColor colorPond;
   GColor colorPond2;
 
+  GColor testColor;
+
   void Update();
   void Draw();
 

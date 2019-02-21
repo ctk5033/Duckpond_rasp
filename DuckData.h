@@ -15,6 +15,7 @@ class DuckData
   Player* player;
 
   static GColor colorDuck;
+  static GImage* imFont;
 
   static GImage* imDuck;
 

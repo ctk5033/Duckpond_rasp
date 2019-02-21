@@ -8,6 +8,7 @@
 #include "Fox.h"
 #include "Hawk.h"
 
+GImage* testFontImage;
 
   MainGame::MainGame(DuckData* sdata)
   {
@@ -20,6 +21,9 @@
   // pond->entList.Add(new Fly(pond, 5,2));
 
   // pond->entList.Add(new Fish(pond, 7,8));
+
+  testFontImage = new GImage("data/duck.png");
+
 
    AddFlyFish();
    AddFlyFish();
@@ -48,6 +52,7 @@
    timer = 0;
 
    birdTimer = 200;
+
 
 
 
@@ -88,6 +93,8 @@
 
   }
 
+
+
   void MainGame::Draw()
   {
    pond->Draw();
@@ -127,6 +134,15 @@
     GameEngine::ResetColor();
 
    }
+
+    GameEngine::SetColor(DuckData::colorDuck);
+   //GameDraw::DrawImagePart(DuckData::imDuck, 50, 50,0,0,128,128, 0, 1, 1, 0, 0, 1, 1, true);
+
+    
+
+   GameDraw::DrawImagePart(DuckData::imFont,50,50, 16*3,16*3,16,16);
+   
+    GameDraw::DrawText(KString("fps:%f", GameEngine::FPS), 150, 50);
 
   }
 

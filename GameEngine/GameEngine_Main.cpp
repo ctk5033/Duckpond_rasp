@@ -35,9 +35,12 @@ int main( int argc, char** args)
   GameEngine::gameOn = true;
 
   while (GameEngine::gameOn )
-  {
-
+  
+{
+ while(true)
+{
    bfps = SDL_GetTicks();
+  
 
    if ((bfps-efps)*GameEngine::frameLimit  >= 1000.0)
    {
@@ -52,9 +55,9 @@ int main( int argc, char** args)
 
     GameEngine::Update();
     GameEngine::HandleKeys();
-
+     break;
    }
-
+}
 
 
 

@@ -26,6 +26,7 @@ DuckData::~DuckData()
 
 GColor DuckData::colorDuck;
 GImage* DuckData::imDuck = NULL;
+GImage* DuckData::imFont = NULL;
 
 GSound* DuckData::wavStart = NULL;
 GSound* DuckData::wavDie = NULL;
@@ -44,6 +45,8 @@ GSound* DuckData::wavAir = NULL;
 void DuckData::InitData()
 {
  imDuck = GImage::GetImg("data/duck.png");
+
+ imFont = GImage::GetImg("data/font/westfont.png");
 
  wavStart = new GSound("data/sound/start.wav");
 

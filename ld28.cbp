@@ -46,14 +46,23 @@
 			<Add directory="/opt/vc/lib" />
 		</Linker>
 		<Unit filename="Animal.cpp" />
+		<Unit filename="Animal.h" />
 		<Unit filename="Duck.cpp" />
+		<Unit filename="Duck.h" />
 		<Unit filename="DuckData.cpp" />
+		<Unit filename="DuckData.h" />
 		<Unit filename="Duckling.cpp" />
+		<Unit filename="Duckling.h" />
 		<Unit filename="Egg.cpp" />
+		<Unit filename="Egg.h" />
 		<Unit filename="Entity.cpp" />
+		<Unit filename="Entity.h" />
 		<Unit filename="Fish.cpp" />
+		<Unit filename="Fish.h" />
 		<Unit filename="Fly.cpp" />
+		<Unit filename="Fly.h" />
 		<Unit filename="Fox.cpp" />
+		<Unit filename="Fox.h" />
 		<Unit filename="GameEngine/GFont.cpp">
 			<Option virtualFolder="C/GameEngine/" />
 		</Unit>
@@ -136,6 +145,7 @@
 			<Option virtualFolder="C/GameEngine/" />
 		</Unit>
 		<Unit filename="Hawk.cpp" />
+		<Unit filename="Hawk.h" />
 		<Unit filename="MainFile.cpp">
 			<Option virtualFolder="C/" />
 		</Unit>
@@ -149,6 +159,7 @@
 			<Option virtualFolder="C/MainSub/MainGame/" />
 		</Unit>
 		<Unit filename="MainMenu.cpp" />
+		<Unit filename="MainMenu.h" />
 		<Unit filename="MainSub.cpp">
 			<Option virtualFolder="C/MainSub/" />
 		</Unit>
@@ -156,6 +167,7 @@
 			<Option virtualFolder="C/Player/" />
 		</Unit>
 		<Unit filename="Plant.cpp" />
+		<Unit filename="Plant.h" />
 		<Unit filename="Player.cpp">
 			<Option virtualFolder="C/Player/" />
 		</Unit>
@@ -163,6 +175,7 @@
 			<Option virtualFolder="C/Player/" />
 		</Unit>
 		<Unit filename="Pond.cpp" />
+		<Unit filename="Pond.h" />
 		<Unit filename="PopText.cpp">
 			<Option virtualFolder="C/PopText/" />
 		</Unit>

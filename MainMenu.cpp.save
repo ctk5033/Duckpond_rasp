@@ -90,7 +90,11 @@
    GameEngine::SetColor(pond->colorGround);
    GameDraw::DrawText("PRESS Z TO GET QUAKIN!", GameEngine::SCREEN_W/2, 165, true);
 
-   GameDraw::DrawText(KString("fps:%f", GameEngine::FPS), 50,50);
+   GameDraw::DrawText(KString("fps:%f", GameEngine::FPS), 50,50); GameDraw::DrawText(KString("fps:%f", GameEngine::FPS), 50,50);
+
+
+
+
 
   }
 
